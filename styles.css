@@ -1,15 +1,25 @@
 :root {
     /* Paleta de Colores - Clean Modern */
-    --bg-color: #F3F4F6;         /* Gris muy suave fondo */
-    --card-bg: #FFFFFF;          /* Blanco puro tarjetas */
-    --text-primary: #1F2937;     /* Gris oscuro texto */
-    --text-secondary: #4B5563;   /* Gris medio */
-    --accent-color: #2563EB;     /* Azul vibrante (Botones/Links) */
-    --accent-hover: #1D4ED8;     /* Azul oscuro hover */
-    --success-color: #10B981;    /* Verde acierto */
-    --error-color: #EF4444;      /* Rojo error */
-    --warning-bg: #FEF3C7;       /* Fondo amarillo para tips */
-    --warning-text: #92400E;     /* Texto amarillo oscuro */
+    --bg-color: #F3F4F6;
+    /* Gris muy suave fondo */
+    --card-bg: #FFFFFF;
+    /* Blanco puro tarjetas */
+    --text-primary: #1F2937;
+    /* Gris oscuro texto */
+    --text-secondary: #4B5563;
+    /* Gris medio */
+    --accent-color: #2563EB;
+    /* Azul vibrante (Botones/Links) */
+    --accent-hover: #1D4ED8;
+    /* Azul oscuro hover */
+    --success-color: #10B981;
+    /* Verde acierto */
+    --error-color: #EF4444;
+    /* Rojo error */
+    --warning-bg: #FEF3C7;
+    /* Fondo amarillo para tips */
+    --warning-text: #92400E;
+    /* Texto amarillo oscuro */
     --font-main: 'Inter', sans-serif;
 }
 
@@ -35,10 +45,40 @@ body {
     max-width: 800px;
     background-color: var(--card-bg);
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     padding: 40px;
     position: relative;
     overflow: hidden;
+}
+
+/* Selector de Idioma */
+.language-selector {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.lang-btn {
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s, border-color 0.2s;
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    transform: scale(1.1);
+}
+
+.lang-btn.active {
+    border-color: var(--accent-color);
+    background-color: rgba(37, 99, 235, 0.1);
 }
 
 /* Pantallas (Gestión de visibilidad) */
@@ -56,8 +96,15 @@ body {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Títulos y Textos */
@@ -88,7 +135,8 @@ h2 {
 }
 
 /* Botones */
-.primary-btn, .secondary-btn {
+.primary-btn,
+.secondary-btn {
     padding: 12px 24px;
     border-radius: 8px;
     font-size: 1rem;
@@ -188,44 +236,105 @@ h2 {
     color: #991B1B;
 }
 
-/* Área de Feedback */
-.feedback-box {
-    margin-top: 25px;
+/* Área de Feedback (Modal Overlay) */
+.feedback-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    background-color: #F8FAFC;
-    border-left: 5px solid var(--accent-color);
-    border-radius: 0 8px 8px 0;
     animation: fadeIn 0.3s;
 }
 
-.feedback-box h3 {
-    font-size: 1.1rem;
-    margin-bottom: 10px;
+.feedback-card {
+    background-color: #FFFFFF;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 16px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-left: 8px solid var(--accent-color);
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.feedback-box.is-correct { border-left-color: var(--success-color); }
-.feedback-box.is-wrong { border-left-color: var(--error-color); }
+/* Scroll area for content */
+.feedback-content-scroll {
+    overflow-y: auto;
+    max-height: 100%;
+    margin-top: 10px;
+}
 
-.feedback-box p {
+.feedback-overlay.is-correct .feedback-card {
+    border-left-color: var(--success-color);
+}
+
+.feedback-overlay.is-wrong .feedback-card {
+    border-left-color: var(--error-color);
+}
+
+.feedback-card h3 {
+    font-size: 1.25rem;
     margin-bottom: 15px;
+    margin-right: 160px;
+    /* Space for the button */
+}
+
+.feedback-card p {
+    margin-bottom: 20px;
     color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Botón Siguiente (Top Right) */
+.next-btn-corner {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    /* Slightly rounded */
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 10;
+}
+
+.next-btn-corner:hover {
+    background-color: var(--accent-hover);
+    transform: scale(1.05);
 }
 
 .cta-box {
     background-color: var(--warning-bg);
     color: var(--warning-text);
-    padding: 10px 15px;
-    border-radius: 6px;
+    padding: 15px;
+    border-radius: 8px;
     font-size: 0.95rem;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px dashed #FCD34D;
 }
 
 .source-box {
     font-size: 0.85rem;
     color: #9CA3AF;
-    margin-bottom: 20px;
     display: block;
+    text-align: right;
+    font-style: italic;
 }
 
 /* --- ESTILOS DEL GLOSARIO (TOOLTIP) --- */
@@ -241,9 +350,11 @@ h2 {
 
 /* Tooltip container */
 .glossary-term::after {
-    content: attr(data-def); /* El texto viene del atributo data-def */
+    content: attr(data-def);
+    /* El texto viene del atributo data-def */
     position: absolute;
-    bottom: 125%; /* Encima de la palabra */
+    bottom: 125%;
+    /* Encima de la palabra */
     left: 50%;
     transform: translateX(-50%);
     background-color: #1F2937;
@@ -258,7 +369,7 @@ h2 {
     opacity: 0;
     transition: opacity 0.3s;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     pointer-events: none;
     line-height: 1.4;
     font-weight: 400;
@@ -299,9 +410,11 @@ h2 {
         flex-direction: column;
         justify-content: center;
     }
-    
-    h1 { font-size: 2rem; }
-    
+
+    h1 {
+        font-size: 2rem;
+    }
+
     /* En móvil, el tooltip debe ajustarse para no salirse de pantalla */
     .glossary-term::after {
         left: 0;

@@ -1,24 +1,32 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA: Piloto  vs  Copiloto - El Desafío</title>
+    <title>IA: Piloto vs Copiloto - El Desafío</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <div class="main-container">
-        
+
         <section id="start-screen" class="screen active">
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="es" title="Español">🇪🇸</button>
+                <button class="lang-btn" data-lang="en" title="English">🇺🇸</button>
+                <button class="lang-btn" data-lang="it" title="Italiano">🇮🇹</button>
+            </div>
             <div class="content-box">
                 <h1>IA: Piloto vs Copiloto</h1>
                 <p class="subtitle">¿Dominas la IA o la IA te domina a ti?</p>
                 <p class="description">
-                    Demuestra que tienes el criterio para usar la Inteligencia Artificial de forma ética, segura y eficiente. 
+                    Demuestra que tienes el criterio para usar la Inteligencia Artificial de forma ética, segura y
+                    eficiente.
                     <br><br>
                     6 Niveles | 60 Retos
                 </p>
@@ -28,10 +36,11 @@
 
         <section id="game-screen" class="screen hidden">
             <div class="header-bar">
-                <div class="level-indicator">Nivel <span id="current-level">1</span>: <span id="level-title">Conceptos</span></div>
+                <div class="level-indicator">Nivel <span id="current-level">1</span>: <span
+                        id="level-title">Conceptos</span></div>
                 <div class="score-box">Puntaje: <span id="score">0</span></div>
             </div>
-            
+
             <div class="progress-container">
                 <div id="progress-bar" class="progress-bar"></div>
             </div>
@@ -39,26 +48,31 @@
             <div class="question-container">
                 <h2 id="question-text">Cargando pregunta...</h2>
                 <div id="options-container" class="options-grid">
-                    </div>
+                </div>
             </div>
 
-            <div id="feedback-area" class="feedback-box hidden">
-                <h3 id="feedback-title">Correcto/Incorrecto</h3>
-                <p id="feedback-text">Explicación técnica...</p>
-                <div class="cta-box">
-                    <strong>💡 Tip de Acción:</strong> <span id="feedback-cta">Call to action...</span>
+            <div id="feedback-area" class="feedback-overlay hidden">
+                <div class="feedback-card">
+                    <button id="next-btn" class="next-btn-corner" aria-label="Next">➜</button>
+                    <h3 id="feedback-title">Correcto/Incorrecto</h3>
+                    <div class="feedback-content-scroll">
+                        <p id="feedback-text">Explicación técnica...</p>
+                        <div class="cta-box">
+                            <strong>💡 Tip de Acción:</strong> <span id="feedback-cta">Call to action...</span>
+                        </div>
+                        <div class="source-box">
+                            <em>Fuente: <span id="feedback-source">Autor</span></em>
+                        </div>
+                    </div>
                 </div>
-                <div class="source-box">
-                    <em>Fuente: <span id="feedback-source">Autor</span></em>
-                </div>
-                <button id="next-btn" class="primary-btn">Siguiente Reto</button>
             </div>
         </section>
 
         <section id="end-screen" class="screen hidden">
             <div class="content-box">
                 <h2>¡Simulación Completada!</h2>
-                <p class="final-score">Puntaje Final: <span id="final-score">0</span> / 600</p>
+                <p class="final-score"><span id="final-score-label">Puntaje Final</span>: <span
+                        id="final-score">0</span> / <span id="max-score">600</span></p>
                 <p id="final-message">Evaluando desempeño...</p>
                 <button onclick="location.reload()" class="secondary-btn">Reiniciar Entrenamiento</button>
             </div>
@@ -67,8 +81,11 @@
     </div>
 
     <script src="glosario.js"></script>
-    <script src="preguntas.js"></script>
+    <script src="preguntas.sp.js"></script>
+    <script src="preguntas.en.js"></script>
+    <script src="preguntas.it.js"></script>
     <script src="script.js"></script>
 
 </body>
+
 </html>

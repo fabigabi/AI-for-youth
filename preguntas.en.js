@@ -1,4 +1,4 @@
-const datosNiveles = [
+const datosNivelesEN = [
     {
         nivel: 1,
         titulo: "Conceptos Fundamentales",
