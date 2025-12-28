@@ -126,6 +126,7 @@ langBtns.forEach(btn => {
     });
 });
 
+
 startBtn.addEventListener('click', startGame);
 nextBtn.addEventListener('click', loadNextQuestion);
 
@@ -177,9 +178,9 @@ function processTextWithGlossary(text) {
     if (!text) return "";
 
     let processedText = text;
-    const termsObj = glosarioTerminos[currentLanguage];
+    const termsObj = (glosarioTerminos && glosarioTerminos[currentLanguage]) ? glosarioTerminos[currentLanguage] : {};
 
-    if (!termsObj) return text;
+    if (!termsObj || Object.keys(termsObj).length === 0) return text;
 
     const terminos = Object.keys(termsObj).sort((a, b) => b.length - a.length);
 
@@ -194,40 +195,46 @@ function processTextWithGlossary(text) {
 
 // CARGAR PREGUNTA
 function loadQuestion() {
-    feedbackArea.classList.add('hidden');
-    feedbackArea.classList.remove('is-correct', 'is-wrong');
-    optionsContainer.innerHTML = '';
+    try {
+        feedbackArea.classList.add('hidden');
+        feedbackArea.classList.remove('is-correct', 'is-wrong');
+        optionsContainer.innerHTML = '';
 
-    const currentData = datosNiveles[currentLanguage];
-    const nivelActual = currentData[currentLevelIndex];
+        const currentData = datosNiveles[currentLanguage];
+        const nivelActual = currentData[currentLevelIndex];
 
-    if (!nivelActual) return; // Safety
+        if (!nivelActual) return; // Safety
 
-    const preguntaActual = nivelActual.preguntas[currentQuestionIndex];
+        const preguntaActual = nivelActual.preguntas[currentQuestionIndex];
 
-    currentLevelEl.textContent = nivelActual.nivel;
-    levelTitleEl.textContent = nivelActual.titulo;
-    scoreEl.textContent = score;
+        currentLevelEl.textContent = nivelActual.nivel;
+        levelTitleEl.textContent = nivelActual.titulo;
+        scoreEl.textContent = score;
 
-    // Calcular Progreso
-    let preguntasPasadas = 0;
-    for (let i = 0; i < currentLevelIndex; i++) {
-        preguntasPasadas += currentData[i].preguntas.length;
+        // Calcular Progreso
+        let preguntasPasadas = 0;
+        for (let i = 0; i < currentLevelIndex; i++) {
+            preguntasPasadas += currentData[i].preguntas.length;
+        }
+        preguntasPasadas += currentQuestionIndex;
+        const totalGlobal = maxScore / 10;
+        const porcentaje = totalGlobal > 0 ? (preguntasPasadas / totalGlobal) * 100 : 0;
+        progressBar.style.width = `${porcentaje}%`;
+
+        questionTextEl.innerHTML = processTextWithGlossary(preguntaActual.texto);
+
+        preguntaActual.opciones.forEach((opcion, index) => {
+            const btn = document.createElement('button');
+            btn.classList.add('option-btn');
+            btn.innerHTML = processTextWithGlossary(opcion);
+            btn.onclick = () => checkAnswer(index, preguntaActual.correcta);
+            optionsContainer.appendChild(btn);
+        });
+    } catch (e) {
+        console.error("Error loading question:", e);
+        questionTextEl.textContent = "Error loading question: " + e.message;
+        alert("Ops! Algo salió mal: " + e.message);
     }
-    preguntasPasadas += currentQuestionIndex;
-    const totalGlobal = maxScore / 10;
-    const porcentaje = totalGlobal > 0 ? (preguntasPasadas / totalGlobal) * 100 : 0;
-    progressBar.style.width = `${porcentaje}%`;
-
-    questionTextEl.innerHTML = processTextWithGlossary(preguntaActual.texto);
-
-    preguntaActual.opciones.forEach((opcion, index) => {
-        const btn = document.createElement('button');
-        btn.classList.add('option-btn');
-        btn.innerHTML = processTextWithGlossary(opcion);
-        btn.onclick = () => checkAnswer(index, preguntaActual.correcta);
-        optionsContainer.appendChild(btn);
-    });
 }
 
 // VERIFICAR RESPUESTA

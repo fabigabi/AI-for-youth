@@ -52,7 +52,7 @@ const datosNivelesSP = [
                 fuente: "OpenAI System Cards"
             },
             {
-                texto: "¿Entiende realmente una IA lo que está escribiendo?",
+                texto: "¿La IA entiende realmente lo que está escribiendo?",
                 opciones: [
                     "Sí, posee una comprensión semántica avanzada similar a la humana.",
                     "Sí, pero solo entiende los idiomas principales (Inglés, Español, Chino).",
