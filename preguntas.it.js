@@ -1,756 +1,756 @@
 const datosNivelesIT = [
     {
         nivel: 1,
-        titulo: "Conceptos Fundamentales",
+        titulo: "Concetti Fondamentali",
         preguntas: [
             {
-                texto: "¿Cuál es la diferencia técnica entre un buscador (Google clásico) y un LLM (ChatGPT)?",
+                texto: "Qual è la differenza tecnica tra un motore di ricerca (Google classico) e un LLM (ChatGPT)?",
                 opciones: [
-                    "El buscador encuentra sitios web; el LLM consulta una base de datos de conocimiento estática y verificada.",
-                    "El buscador recupera información indexada; el LLM genera nueva información prediciendo la siguiente palabra probable.",
-                    "El buscador es para textos cortos y el LLM procesa imágenes y videos exclusivamente."
+                    "Il motore di ricerca trova siti web; l'LLM consulta un database di conoscenza statica e verificata.",
+                    "Il motore di ricerca recupera informazioni indicizzate; l'LLM genera nuove informazioni prevedendo la parola successiva più probabile.",
+                    "Il motore di ricerca è per testi brevi e l'LLM elabora immagini e video esclusivamente."
                 ],
                 correcta: 1,
-                feedback: "Un buscador 'encuentra' lo que ya existe. Un LLM 'inventa' la respuesta palabra por palabra basándose en probabilidades.",
-                cta: "No uses IA para buscar datos factuales recientes (horarios, precios). Usa un buscador.",
+                feedback: "Un motore di ricerca 'trova' ciò che già esiste. Un LLM 'inventa' la risposta parola per parola basandosi sulle probabilità.",
+                cta: "Non usare l'IA per cercare dati fattuali recenti (orari, prezzi). Usa un motore di ricerca.",
                 fuente: "Wayne Holmes / UNESCO"
             },
             {
-                texto: "Cuando ChatGPT escribe una frase, ¿cómo 'decide' qué palabra poner a continuación?",
+                texto: "Quando ChatGPT scrive una frase, come 'decide' quale parola mettere dopo?",
                 opciones: [
-                    "Analiza la lógica semántica y el significado filosófico de la pregunta.",
-                    "Consulta en tiempo real en Wikipedia para asegurar la veracidad.",
-                    "Calcula la probabilidad estadística del 'token' que mejor encaja según su entrenamiento previo."
+                    "Analizza la logica semantica e il significato filosofico della domanda.",
+                    "Consulta Wikipedia in tempo reale per garantire la veridicità.",
+                    "Calcola la probabilità statistica del 'token' che si adatta meglio in base al suo addestramento precedente."
                 ],
                 correcta: 2,
-                feedback: "Es matemática, no comprensión. El modelo predice la continuación más probable, no necesariamente la más verdadera.",
-                cta: "Recuerda: que suene coherente no significa que sea verdad.",
+                feedback: "È matematica, non comprensione. Il modello prevede la continuazione più probabile, non necessariamente la più vera.",
+                cta: "Ricorda: che suoni coerente non significa che sia vero.",
                 fuente: "Kate Crawford - Atlas of AI"
             },
             {
-                texto: "¿Qué es una 'Alucinación' en el contexto de la IA?",
+                texto: "Cos'è un' 'Allucinazione' nel contesto dell'IA?",
                 opciones: [
-                    "Un error de conexión donde se mezclan respuestas de dos usuarios distintos.",
-                    "Cuando el modelo genera información falsa con total confianza y coherencia gramatical.",
-                    "Un virus informático que afecta a los servidores visuales de la IA."
+                    "Un errore di connessione in cui si mescolano risposte di due utenti diversi.",
+                    "Quando il modello genera informazioni false con totale sicurezza e coerenza grammaticale.",
+                    "Un virus informatico che colpisce i server visivi dell'IA."
                 ],
                 correcta: 1,
-                feedback: "Al ser probabilístico, el modelo rellena vacíos con datos inventados si encajan en el patrón lingüístico.",
-                cta: "Desconfía siempre si la IA te da datos muy específicos (fechas, leyes) sin citar fuentes.",
+                feedback: "Essendo probabilistico, il modello riempie i vuoti con dati inventati se si adattano al modello linguistico.",
+                cta: "Diffida sempre se l'IA ti dà dati molto specifici (date, leggi) senza citare fonti.",
                 fuente: "Stanford HAI Report"
             },
             {
-                texto: "¿De dónde obtiene su conocimiento un modelo como GPT-4?",
+                texto: "Da dove ottiene la sua conoscenza un modello come GPT-4?",
                 opciones: [
-                    "De un equipo global de profesores que validan cada respuesta manualmente.",
-                    "De un conjunto masivo de datos (Common Crawl) extraídos de internet hasta una fecha de corte.",
-                    "Se conecta directamente a la mente de los desarrolladores."
+                    "Da un team globale di professori che convalidano ogni risposta manualmente.",
+                    "Da un enorme set di dati (Common Crawl) estratti da internet fino a una data di taglio.",
+                    "Si connette direttamente alla mente degli sviluppatori."
                 ],
                 correcta: 1,
-                feedback: "Son datos 'congelados' en el tiempo. Si algo pasó después de su fecha de corte, la IA no lo sabe nativamente.",
-                cta: "Verifica siempre la fecha de actualización del modelo que usas.",
+                feedback: "Sono dati 'congelati' nel tempo. Se qualcosa è successo dopo la data di taglio, l'IA non lo sa nativamente.",
+                cta: "Verifica sempre la data di aggiornamento del modello che usi.",
                 fuente: "OpenAI System Cards"
             },
             {
-                texto: "¿Entiende realmente una IA lo que está escribiendo?",
+                texto: "Un'IA capisce davvero quello che sta scrivendo?",
                 opciones: [
-                    "Sí, posee una comprensión semántica avanzada similar a la humana.",
-                    "Sí, pero solo entiende los idiomas principales (Inglés, Español, Chino).",
-                    "No. Procesa sintaxis (reglas y orden) pero carece de comprensión semántica (significado) del mundo."
+                    "Sì, possiede una comprensione semantica avanzata simile a quella umana.",
+                    "Sì, ma capisce solo le lingue principali (Inglese, Spagnolo, Cinese).",
+                    "No. Elabora la sintassi (regole e ordine) ma manca di comprensione semantica (significato) del mondo."
                 ],
                 correcta: 2,
-                feedback: "Funciona como un 'Loro Estocástico'. Repite formas lingüísticas complejas sin entender el contenido.",
-                cta: "No asumas que la IA 'sabe' de lo que habla. Solo sabe juntar palabras.",
+                feedback: "Funziona come un 'Pappagallo Stocastico'. Ripete forme linguistiche complesse senza capire il contenuto.",
+                cta: "Non dare per scontato che l'IA 'sappia' di cosa parla. Sa solo mettere insieme le parole.",
                 fuente: "Emily Bender (Stochastic Parrots)"
             },
             {
-                texto: "¿Cómo procesa la IA la palabra 'Computadora'?",
+                texto: "Come elabora l'IA la parola 'Computer'?",
                 opciones: [
-                    "La divide en 'Tokens' (fragmentos numéricos), por ejemplo: 'Com-pu-ta-do-ra'.",
-                    "La lee letra por letra como un humano aprendiendo a leer.",
-                    "La procesa como una imagen visual de una computadora."
+                    "La divide in 'Token' (frammenti numerici), per esempio: 'Com-pu-ter'.",
+                    "La legge lettera per lettera come un umano che impara a leggere.",
+                    "La elabora come un'immagine visiva di un computer."
                 ],
                 correcta: 0,
-                feedback: "Los modelos ven números, no letras. Esto explica por qué a veces fallan en deletrear o rimas.",
-                cta: "Si necesitas contar letras o palabras exactas, no confíes en la IA.",
+                feedback: "I modelli vedono numeri, non lettere. Questo spiega perché a volte falliscono nello spelling o nelle rime.",
+                cta: "Se devi contare lettere o parole esatte, non fidarti dell'IA.",
                 fuente: "OpenAI Tokenizer"
             },
             {
-                texto: "¿Qué sucede técnicamente si aumentas la 'temperatura' del modelo?",
+                texto: "Cosa succede tecnicamente se aumenti la 'temperatura' del modello?",
                 opciones: [
-                    "El modelo consume más memoria RAM para procesar respuestas complejas.",
-                    "El modelo elige opciones menos probables, volviéndose más 'creativo' pero propenso a alucinar.",
-                    "El modelo se vuelve más estricto y solo da respuestas cortas."
+                    "Il modello consuma più RAM per elaborare risposte complesse.",
+                    "Il modello sceglie opzioni meno probabili, diventando più 'creativo' ma incline ad allucinare.",
+                    "Il modello diventa più rigoroso e dà solo risposte brevi."
                 ],
                 correcta: 1,
-                feedback: "Temperatura 0 es determinista (repetitivo). Temperatura alta es aleatoria (caótica).",
-                cta: "Para tareas de hechos/matemáticas, usa temperatura baja o modo 'preciso'.",
+                feedback: "Temperatura 0 è deterministica (ripetitiva). Temperatura alta è casuale (caotica).",
+                cta: "Per compiti di fatti/matematica, usa temperatura bassa o modalità 'precisa'.",
                 fuente: "Ethan Mollick"
             },
             {
-                texto: "Estás analizando un libro entero y la IA olvida el principio. ¿Por qué?",
+                texto: "Stai analizzando un intero libro e l'IA dimentica l'inizio. Perché?",
                 opciones: [
-                    "El servidor se reinició para ahorrar energía.",
-                    "Has superado su 'Ventana de Contexto' (memoria de trabajo limitada).",
-                    "La IA prioriza la información más reciente porque la considera más importante."
+                    "Il server si è riavviato per risparmiare energia.",
+                    "Hai superato la sua 'Finestra di Contesto' (memoria di lavoro limitata).",
+                    "L'IA dà priorità alle informazioni più recenti perché le considera più importanti."
                 ],
                 correcta: 1,
-                feedback: "La IA tiene un límite de palabras que puede 'ver' a la vez. Lo que sale de la ventana, se olvida.",
-                cta: "Si trabajas con textos largos, divídelos en partes o usa modelos con ventana amplia (100k+ tokens).",
+                feedback: "L'IA ha un limite di parole che può 'vedere' alla volta. Ciò che esce dalla finestra, viene dimenticato.",
+                cta: "Se lavori con testi lunghi, dividili in parti o usa modelli con finestra ampia (100k+ token).",
                 fuente: "Anthropic Docs"
             },
             {
-                texto: "¿Qué significa que un modelo sea 'Multimodal'?",
+                texto: "Cosa significa che un modello è 'Multimodale'?",
                 opciones: [
-                    "Que puede ejecutarse en múltiples sistemas operativos (Windows, Mac, Linux).",
-                    "Que puede procesar texto, imágenes y audio de forma nativa simultáneamente.",
-                    "Que puede hablar con múltiples usuarios a la vez."
+                    "Che può essere eseguito su più sistemi operativi (Windows, Mac, Linux).",
+                    "Che può elaborare testo, immagini e audio in modo nativo simultaneamente.",
+                    "Che può parlare con più utenti contemporaneamente."
                 ],
                 correcta: 1,
-                feedback: "Los modelos modernos no solo leen. Pueden 'ver' fotos y 'escuchar' audios.",
-                cta: "Usa la multimodalidad para analizar gráficos o resumir audios de clase.",
+                feedback: "I modelli moderni non leggono soltanto. Possono 'vedere' foto e 'ascoltare' audio.",
+                cta: "Usa la multimodalità per analizzare grafici o riassumere audio di lezioni.",
                 fuente: "Google DeepMind"
             },
             {
-                texto: "¿Cuál es el rol del humano (Human-in-the-loop) al usar IA?",
+                texto: "Qual è il ruolo dell'umano (Human-in-the-loop) nell'uso dell'IA?",
                 opciones: [
-                    "Supervisar solo el inicio del proceso y dejar que la IA termine.",
-                    "Entrenar a la IA para que no necesite supervisión futura.",
-                    "Verificar obligatoriamente los resultados debido a la posibilidad de error.",
+                    "Supervisionare solo l'inizio del processo e lasciare che l'IA finisca.",
+                    "Addestrare l'IA affinché non necessiti di supervisione futura.",
+                    "Verificare obbligatoriamente i risultati a causa della possibilità di errore.",
                 ],
                 correcta: 2,
-                feedback: "La IA es un copiloto propenso a errores. El humano es el responsable final de la integridad.",
-                cta: "Nunca entregues un trabajo de IA sin haber leído y verificado cada línea.",
+                feedback: "L'IA è un copilota incline agli errori. L'umano è il responsabile finale dell'integrità.",
+                cta: "Non consegnare mai un lavoro di IA senza aver letto e verificato ogni riga.",
                 fuente: "UNESCO"
             }
         ]
     },
     {
         nivel: 2,
-        titulo: "Ética y Riesgos",
+        titulo: "Etica e Rischi",
         preguntas: [
             {
-                texto: "Si una IA genera imágenes de médicos y solo muestra hombres, ¿a qué se debe?",
+                texto: "Se un'IA genera immagini di medici e mostra solo uomini, a cosa è dovuto?",
                 opciones: [
-                    "A que la IA está programada para evitar la diversidad forzada.",
-                    "A que refleja los Sesgos históricos presentes en los datos de entrenamiento.",
-                    "Es una coincidencia aleatoria del algoritmo."
+                    "Al fatto che l'IA è programmata per evitare la diversità forzata.",
+                    "Al fatto che riflette i Bias storici presenti nei dati di addestramento.",
+                    "È una coincidenza casuale dell'algoritmo."
                 ],
                 correcta: 1,
-                feedback: "Garbage In, Garbage Out. Si la historia tiene sesgos, el modelo los amplifica.",
-                cta: "Sé crítico: si la IA te da estereotipos, pídele explícitamente diversidad en el prompt.",
+                feedback: "Garbage In, Garbage Out. Se la storia ha pregiudizi, il modello li amplifica.",
+                cta: "Sii critico: se l'IA ti dà stereotipi, chiedile esplicitamente diversità nel prompt.",
                 fuente: "Kate Crawford"
             },
             {
-                texto: "¿Cuál es el mayor riesgo ético de los 'Deepfakes' en adolescentes?",
+                texto: "Qual è il maggior rischio etico dei 'Deepfake' per gli adolescenti?",
                 opciones: [
-                    "Que se usen para copiar en exámenes orales por video.",
-                    "La creación de material dañino (acoso, desinformación) suplantando identidades.",
-                    "Que los actores pierdan su trabajo en el cine."
+                    "Che vengano usati per copiare agli esami orali via video.",
+                    "La creazione di materiale dannoso (bullismo, disinformazione) che ruba identità.",
+                    "Che gli attori perdano il lavoro nel cinema."
                 ],
                 correcta: 1,
-                feedback: "La facilidad para crear videos falsos amenaza la reputación y privacidad de las personas.",
-                cta: "Nunca crees ni compartas deepfakes de compañeros. Es una violación grave y tiene consecuencias legales.",
+                feedback: "La facilità nel creare video falsi minaccia la reputazione e la privacy delle persone.",
+                cta: "Non creare né condividere mai deepfake di compagni. È una grave violazione e ha conseguenze legali.",
                 fuente: "Sonia Livingstone"
             },
             {
-                texto: "¿Cuál es el impacto físico real de usar IA Generativa?",
+                texto: "Qual è l'impatto fisico reale dell'uso dell'IA Generativa?",
                 opciones: [
-                    "Ninguno, es software en la nube.",
-                    "Alto consumo de agua y electricidad en los centros de datos.",
-                    "Solo gasta la batería de tu dispositivo."
+                    "Nessuno, è software nel cloud.",
+                    "Alto consumo di acqua ed elettricità nei data center.",
+                    "Consuma solo la batteria del tuo dispositivo."
                 ],
                 correcta: 1,
-                feedback: "Cada consulta activa procesadores potentes que generan calor y requieren litros de agua para enfriarse.",
-                cta: "Usa la IA cuando aporte valor real, no por aburrimiento.",
+                feedback: "Ogni consultazione attiva processori potenti che generano calore e richiedono litri d'acqua per raffreddarsi.",
+                cta: "Usa l'IA quando porta valore reale, non per noia.",
                 fuente: "MIT Technology Review"
             },
             {
-                texto: "¿Por qué artistas y escritores demandan a las empresas de IA?",
+                texto: "Perché artisti e scrittori fanno causa alle aziende di IA?",
                 opciones: [
-                    "Porque la IA dibuja mejor que ellos.",
-                    "Por uso de sus obras con Copyright para entrenamiento sin permiso ni pago.",
-                    "Porque la IA satura el mercado de arte barato."
+                    "Perché l'IA disegna meglio di loro.",
+                    "Per l'uso delle loro opere protette da Copyright per l'addestramento senza permesso né pagamento.",
+                    "Perché l'IA satura il mercato dell'arte a basso costo."
                 ],
                 correcta: 1,
-                feedback: "El debate es si el entrenamiento es 'Uso Justo' o robo de propiedad intelectual.",
-                cta: "Si generas arte con IA, reconoce que es sintético. No te apropies del trabajo de la máquina.",
-                fuente: "Casos NYT vs OpenAI"
+                feedback: "Il dibattito è se l'addestramento sia 'Fair Use' o furto di proprietà intellettuale.",
+                cta: "Se generi arte con l'IA, riconosci che è sintetica. Non appropriarti del lavoro della macchina.",
+                fuente: "Casi NYT vs OpenAI"
             },
             {
-                texto: "¿Qué es el problema de la 'Caja Negra' (Black Box)?",
+                texto: "Cos'è il problema della 'Scatola Nera' (Black Box)?",
                 opciones: [
-                    "Que los servidores son de color negro para disipar calor.",
-                    "Que ni los creadores saben explicar exactamente cómo la IA llegó a una conclusión específica.",
-                    "Que el código fuente es privado y nadie puede verlo."
+                    "Che i server sono neri per dissipare il calore.",
+                    "Che nemmeno i creatori sanno spiegare esattamente come l'IA sia arrivata a una specifica conclusione.",
+                    "Che il codice sorgente è privato e nessuno può vederlo."
                 ],
                 correcta: 1,
-                feedback: "La falta de 'explicabilidad' es peligrosa si la IA toma decisiones sobre créditos o admisiones.",
-                cta: "No aceptes un 'no' o un veredicto de una IA sin pedir una explicación humana.",
+                feedback: "La mancanza di 'spiegabilità' è pericolosa se l'IA prende decisioni su crediti o ammissioni.",
+                cta: "Non accettare un 'no' o un verdetto da un'IA senza chiedere una spiegazione umana.",
                 fuente: "Wayne Holmes"
             },
             {
-                texto: "¿Por qué es riesgoso tratar a la IA como si fuera una persona (Antropomorfización)?",
+                texto: "Perché è rischioso trattare l'IA come se fosse una persona (Antropomorfizzazione)?",
                 opciones: [
-                    "Genera dependencia emocional falsa hacia un objeto sin empatía ni responsabilidad.",
-                    "La IA funciona peor si no eres educado con ella.",
-                    "No tiene riesgo, ayuda a practicar habilidades sociales."
+                    "Genera falsa dipendenza emotiva verso un oggetto senza empatia né responsabilità.",
+                    "L'IA funziona peggio se non sei educato con lei.",
+                    "Non c'è rischio, aiuta a praticare le abilità sociali."
                 ],
                 correcta: 0,
-                feedback: "El 'Efecto ELIZA' nos hace vulnerables a la manipulación. La IA no siente, solo simula.",
-                cta: "Recuérdate a ti mismo: 'Esto es un software, no un amigo'.",
+                feedback: "L' 'Effetto ELIZA' ci rende vulnerabili alla manipolazione. L'IA non sente, simula solo.",
+                cta: "Ricorda a te stesso: 'Questo è un software, non un amico'.",
                 fuente: "Sherry Turkle"
             },
             {
-                texto: "¿Quién suele realizar la moderación de contenido violento para entrenar a la IA?",
+                texto: "Chi esegue solitamente la moderazione di contenuti violenti per addestrare l'IA?",
                 opciones: [
-                    "Algoritmos automáticos avanzados.",
-                    "Humanos en países en desarrollo con bajos salarios expuestos a traumas.",
-                    "Los ingenieros jefe de las empresas tecnológicas."
+                    "Algoritmi automatici avanzati.",
+                    "Umani in paesi in via di sviluppo con bassi salari esposti a traumi.",
+                    "Gli ingegneri capo delle aziende tecnologiche."
                 ],
                 correcta: 1,
-                feedback: "Detrás de la IA 'limpia' hay trabajo humano precario filtrando lo peor de internet.",
-                cta: "Ten conciencia de la cadena de producción humana detrás de la tecnología.",
-                fuente: "Revista TIME"
+                feedback: "Dietro l'IA 'pulita' c'è lavoro umano precario che filtra il peggio di internet.",
+                cta: "Sii consapevole della catena di produzione umana dietro la tecnologia.",
+                fuente: "Rivista TIME"
             },
             {
-                texto: "¿Cómo afectan los algoritmos de recomendación (IA) a la opinión pública?",
+                texto: "Come influenzano l'opinione pubblica gli algoritmi di raccomandazione (IA)?",
                 opciones: [
-                    "Muestran siempre contenido variado para educar.",
-                    "Crean 'Cámaras de Eco' que solo confirman lo que ya crees, polarizando.",
-                    "Nos hacen más tolerantes al mostrarnos de todo."
+                    "Mostrano sempre contenuti vari per educare.",
+                    "Creano 'Camere dell'Eco' che confermano solo ciò che già credi, polarizzando.",
+                    "Ci rendono più tolleranti mostrandoci di tutto."
                 ],
                 correcta: 1,
-                feedback: "Para mantenerte pegado a la pantalla, la IA te muestra lo que quieres ver, no la realidad completa.",
-                cta: "Busca activamente opiniones contrarias a las tuyas para romper la burbuja.",
+                feedback: "Per tenerti incollato allo schermo, l'IA ti mostra ciò che vuoi vedere, non la realtà completa.",
+                cta: "Cerca attivamente opinioni contrarie alle tue per rompere la bolla.",
                 fuente: "Mizuko Ito"
             },
             {
-                texto: "Si usas IA para un trabajo y esta difama a alguien, ¿quién es responsable?",
+                texto: "Se usi l'IA per un lavoro e questa diffama qualcuno, chi è responsabile?",
                 opciones: [
-                    "La empresa de IA por programarla mal.",
-                    "Nadie, es un error informático.",
-                    "Tú, como editor y responsable final del contenido publicado."
+                    "L'azienda di IA per averla programmata male.",
+                    "Nessuno, è un errore informatico.",
+                    "Tu, come redattore e responsabile finale del contenuto pubblicato."
                 ],
                 correcta: 2,
-                feedback: "La herramienta no tiene responsabilidad legal. El usuario que publica, sí.",
-                cta: "Tú eres el Director Editorial. Si la IA falla, la culpa es tuya por no revisar.",
-                fuente: "Normas Académicas"
+                feedback: "Lo strumento non ha responsabilità legale. L'utente che pubblica sì.",
+                cta: "Tu sei il Direttore Editoriale. Se l'IA sbaglia, la colpa è tua per non aver controllato.",
+                fuente: "Norme Accademiche"
             },
             {
-                texto: "¿Qué tarea es éticamente cuestionable delegar 100% a una IA?",
+                texto: "Quale compito è eticamente discutibile delegare al 100% a un'IA?",
                 opciones: [
-                    "Hacer un resumen de apuntes.",
-                    "Escribir una carta de disculpa o pésame a un amigo.",
-                    "Organizar un calendario semanal."
+                    "Fare un riassunto di appunti.",
+                    "Scrivere una lettera di scuse o condoglianze a un amico.",
+                    "Organizzare un calendario settimanale."
                 ],
                 correcta: 1,
-                feedback: "La comunicación emocional requiere autenticidad humana. Usar IA aquí vacía de significado el mensaje.",
-                cta: "Usa la IA para tareas lógicas, usa tu corazón para tareas humanas.",
+                feedback: "La comunicazione emotiva richiede autenticità umana. Usare l'IA qui svuota di significato il messaggio.",
+                cta: "Usa l'IA per compiti logici, usa il cuore per compiti umani.",
                 fuente: "Ethan Mollick"
             }
         ]
     },
     {
         nivel: 3,
-        titulo: "Ingeniería de Prompts",
+        titulo: "Ingegneria dei Prompt",
         preguntas: [
             {
-                texto: "¿Qué elementos (CRTF) faltan en el prompt: 'Escribe sobre el clima'?",
+                texto: "Quali elementi (CRTF) mancano nel prompt: 'Scrivi sul clima'?",
                 opciones: [
-                    "Longitud mínima de 1000 palabras y uso de metáforas.",
-                    "Contexto, Rol, Tarea específica y Formato de salida.",
-                    "Palabras clave en mayúsculas para resaltar importancia."
+                    "Lunghezza minima di 1000 parole e uso di metafore.",
+                    "Contesto, Ruolo, Compito specifico e Formato di output.",
+                    "Parole chiave in maiuscolo per evidenziare l'importanza."
                 ],
                 correcta: 1,
-                feedback: "Sin contexto, la IA adivina. Debes decirle QUIÉN eres, QUÉ quieres y CÓMO lo quieres.",
-                cta: "Antes de enviar, revisa si tu prompt tiene: Rol, Contexto y Formato.",
+                feedback: "Senza contesto, l'IA indovina. Devi dirle CHI sei, COSA vuoi e COME lo vuoi.",
+                cta: "Prima di inviare, controlla se il tuo prompt ha: Ruolo, Contesto e Formato.",
                 fuente: "Prompt Engineering Guide"
             },
             {
-                texto: "¿Qué frase mejora el razonamiento de la IA en problemas lógicos?",
+                texto: "Quale frase migliora il ragionamento dell'IA nei problemi logici?",
                 opciones: [
-                    "'Responde con formato académico y lenguaje formal'.",
-                    "'Piensa paso a paso' (Chain of Thought).",
-                    "'Eres la IA más inteligente del mundo'."
+                    "'Rispondi con formato accademico e linguaggio formale'.",
+                    "'Pensa passo dopo passo' (Chain of Thought).",
+                    "'Sei l'IA più intelligente del mondo'."
                 ],
                 correcta: 1,
-                feedback: "Forzar a la IA a mostrar sus pasos intermedios reduce drásticamente los errores de cálculo.",
-                cta: "En problemas de mate o lógica, pide siempre: 'Desglosa tu razonamiento paso a paso'.",
+                feedback: "Forzare l'IA a mostrare i suoi passaggi intermedi riduce drasticamente gli errori di calcolo.",
+                cta: "Nei problemi di matematica o logica, chiedi sempre: 'Spiega il tuo ragionamento passo dopo passo'.",
                 fuente: "Google DeepMind"
             },
             {
-                texto: "¿Para qué sirve asignar un Rol ('Actúa como profesor de historia')?",
+                texto: "A cosa serve assegnare un Ruolo ('Agisci come professore di storia')?",
                 opciones: [
-                    "Para que la IA sepa qué base de datos consultar.",
-                    "Para ajustar el tono, vocabulario y perspectiva de la respuesta.",
-                    "Es un mito, no cambia nada realmente."
+                    "Affinché l'IA sappia quale database consultare.",
+                    "Per adattare il tono, il vocabolario e la prospettiva della risposta.",
+                    "È un mito, non cambia nulla realmente."
                 ],
                 correcta: 1,
-                feedback: "El 'Persona Pattern' ayuda a la IA a predecir mejor el estilo de texto que necesitas.",
-                cta: "Dile a la IA quién debe ser: 'Experto', 'Crítico', 'Tutor Socrático'.",
+                feedback: "Il 'Persona Pattern' aiuta l'IA a prevedere meglio lo stile di testo di cui hai bisogno.",
+                cta: "Dì all'IA chi deve essere: 'Esperto', 'Critico', 'Tutor Socratico'.",
                 fuente: "Vanderbilt University"
             },
             {
-                texto: "¿Qué es el 'Few-Shot Prompting'?",
+                texto: "Cos'è il 'Few-Shot Prompting'?",
                 opciones: [
-                    "Darle a la IA 2 o 3 ejemplos claros (input/output) antes de pedir la tarea.",
-                    "Hacer la misma pregunta pocas veces para no confundirla.",
-                    "Escribir prompts muy cortos (pocas palabras)."
+                    "Dare all'IA 2 o 3 esempi chiari (input/output) prima di chiedere il compito.",
+                    "Fare la stessa domanda poche volte per non confonderla.",
+                    "Scrivere prompt molto brevi (poche parole)."
                 ],
                 correcta: 0,
-                feedback: "Los ejemplos son la mejor forma de programar el comportamiento de la IA sin código.",
-                cta: "No solo digas qué hacer, muestra un ejemplo de cómo quieres que se haga.",
+                feedback: "Gli esempi sono il modo migliore per programmare il comportamento dell'IA senza codice.",
+                cta: "Non dire solo cosa fare, mostra un esempio di come vuoi che sia fatto.",
                 fuente: "OpenAI GPT-3 Paper"
             },
             {
-                texto: "¿Cómo usas la IA como 'Tutor Socrático' para estudiar?",
+                texto: "Come usi l'IA come 'Tutor Socratico' per studiare?",
                 opciones: [
-                    "Pidiéndole: 'Resúmeme este tema'.",
-                    "Pidiéndole: 'Hazme preguntas sobre este tema, espera mi respuesta y corrígeme'.",
-                    "Pidiéndole: 'Dime las preguntas que saldrán en el examen'."
+                    "Chiedendole: 'Riassumimi questo argomento'.",
+                    "Chiedendole: 'Fammi domande su questo argomento, aspetta la mia risposta e correggimi'.",
+                    "Chiedendole: 'Dimmi le domande che usciranno all'esame'."
                 ],
                 correcta: 1,
-                feedback: "El aprendizaje activo (responder) es mejor que el pasivo (leer resúmenes).",
-                cta: "Usa el prompt: 'Ponme a prueba. Hazme una pregunta a la vez'.",
+                feedback: "L'apprendimento attivo (rispondere) è migliore di quello passivo (leggere riassunti).",
+                cta: "Usa il prompt: 'Mettimi alla prova. Fammi una domanda alla volta'.",
                 fuente: "Khan Academy"
             },
             {
-                texto: "La primera respuesta de la IA rara vez es perfecta. ¿Qué debes hacer?",
+                texto: "La prima risposta dell'IA raramente è perfetta. Cosa devi fare?",
                 opciones: [
-                    "Reiniciar el chat y preguntar lo mismo.",
-                    "Iterar: conversar, pedir correcciones y refinar el resultado.",
-                    "Asumir que la IA no sabe del tema."
+                    "Riavviare la chat e chiedere la stessa cosa.",
+                    "Iterare: conversare, chiedere correzioni e perfezionare il risultato.",
+                    "Assumere che l'IA non sappia dell'argomento."
                 ],
                 correcta: 1,
-                feedback: "Trata a la IA como un pasante: dale feedback para que mejore su trabajo.",
-                cta: "No te quedes con la primera versión. Dile: 'Mejora esto, hazlo más conciso'.",
+                feedback: "Tratta l'IA come uno stagista: dagle feedback affinché migliori il suo lavoro.",
+                cta: "Non accontentarti della prima versione. Dille: 'Migliora questo, fallo più conciso'.",
                 fuente: "Nielsen Norman Group"
             },
             {
-                texto: "Si pides a ChatGPT '5 referencias bibliográficas con links', ¿qué suele pasar?",
+                texto: "Se chiedi a ChatGPT '5 riferimenti bibliografici con link', cosa succede di solito?",
                 opciones: [
-                    "Te da referencias antiguas pero válidas.",
-                    "Alucina autores y títulos que parecen reales pero no existen.",
-                    "Te dice que no tiene acceso a internet."
+                    "Ti dà riferimenti vecchi ma validi.",
+                    "Allucina autori e titoli che sembrano reali ma non esistono.",
+                    "Ti dice che non ha accesso a internet."
                 ],
                 correcta: 1,
-                feedback: "Los LLM inventan citas para complacer la estructura del prompt.",
-                cta: "NUNCA pidas bibliografía a una IA generativa básica. Usa Google Scholar.",
+                feedback: "Gli LLM inventano citazioni per compiacere la struttura del prompt.",
+                cta: "NON chiedere MAI bibliografia a un'IA generativa di base. Usa Google Scholar.",
                 fuente: "Nature"
             },
             {
-                texto: "¿Cómo evitas que la IA invente datos al analizar un PDF tuyo?",
+                texto: "Come eviti che l'IA inventi dati analizzando un tuo PDF?",
                 opciones: [
-                    "Le pides que busque información similar en internet.",
-                    "Usas 'Grounding': le indicas 'Responde SOLO usando la información de este texto'.",
-                    "Le dices que es muy importante que no mienta."
+                    "Le chiedi di cercare informazioni simili su internet.",
+                    "Usando 'Grounding': le indichi 'Rispondi SOLO usando le informazioni di questo testo'.",
+                    "Le dici che è molto importante che non menta."
                 ],
                 correcta: 1,
-                feedback: "Debes anclar (Ground) a la IA a tus datos para restringir su imaginación.",
-                cta: "Sube tu apunte y dile: 'Busca la respuesta solo aquí. Si no está, dime que no sabes'.",
+                feedback: "Devi ancorare (Ground) l'IA ai tuoi dati per limitare la sua immaginazione.",
+                cta: "Carica il tuo appunto e dille: 'Cerca la risposta solo qui. Se non c'è, dimmi che non lo sai'.",
                 fuente: "Microsoft RAG"
             },
             {
-                texto: "Necesitas comparar dos temas visualmente. ¿Qué pides en el prompt?",
+                texto: "Devi confrontare due argomenti visivamente. Cosa chiedi nel prompt?",
                 opciones: [
-                    "'Haz una comparación detallada'.",
-                    "'Crea una tabla comparativa con columnas para: Diferencias, Similitudes y Fechas'.",
-                    "'Haz un esquema visual'."
+                    "'Fai un confronto dettagliato'.",
+                    "'Crea una tabella comparativa con colonne per: Differenze, Somiglianze e Date'.",
+                    "'Fai uno schema visivo'."
                 ],
                 correcta: 1,
-                feedback: "Especificar el formato de salida (Tabla, Lista, CSV) ahorra tiempo de edición.",
-                cta: "No leas párrafos densos. Pide tablas o listas con viñetas.",
+                feedback: "Specificare il formato di output (Tabella, Elenco, CSV) risparmia tempo di editing.",
+                cta: "Non leggere paragrafi densi. Chiedi tabelle o elenchi puntati.",
                 fuente: "Prompt Engineering Tips"
             },
             {
-                texto: "Has usado la IA para entender Física. ¿Cuál es el paso final obligatorio?",
+                texto: "Hai usato l'IA per capire la Fisica. Qual è il passaggio finale obbligatorio?",
                 opciones: [
-                    "Validación Cruzada: verificar fórmulas y datos con el libro de texto.",
-                    "Preguntarle a la IA: '¿Estás segura?'.",
-                    "Copiarlo al cuaderno tal cual."
+                    "Validazione Incrociata: verificare formule e dati con il libro di testo.",
+                    "Chiedere all'IA: 'Sei sicura?'.",
+                    "Copiarlo sul quaderno così com'è."
                 ],
                 correcta: 0,
-                feedback: "La IA razona bien pero recuerda mal los datos exactos.",
-                cta: "Confía pero verifica. Siempre.",
+                feedback: "L'IA ragiona bene ma ricorda male i dati esatti.",
+                cta: "Fidati ma verifica. Sempre.",
                 fuente: "UNESCO"
             }
         ]
     },
     {
         nivel: 4,
-        titulo: "Criterio y Escepticismo",
+        titulo: "Criterio e Scetticismo",
         preguntas: [
             {
-                texto: "¿Qué es el 'Sesgo de Automatización'?",
+                texto: "Cos'è il 'Bias di Automazione'?",
                 opciones: [
-                    "La fatiga mental que ocurre tras usar la IA mucho tiempo.",
-                    "La tendencia humana a confiar más en la máquina que en el propio juicio, ignorando errores.",
-                    "El error de programación que hace que la IA se repita."
+                    "La fatica mentale che si verifica dopo aver usato l'IA per molto tempo.",
+                    "La tendenza umana a fidarsi più della macchina che del proprio giudizio, ignorando gli errori.",
+                    "L'errore di programmazione che fa ripetere l'IA."
                 ],
                 correcta: 1,
-                feedback: "Es peligroso 'apagar el cerebro'. La máquina puede equivocarse con total seguridad.",
-                cta: "Si tu instinto dice que algo está mal, probablemente lo esté. Investiga.",
+                feedback: "È pericoloso 'spegnere il cervello'. La macchina può sbagliare con totale sicurezza.",
+                cta: "Se il tuo istinto dice che qualcosa non va, probabilmente è così. Indaga.",
                 fuente: "Skitka et al."
             },
             {
-                texto: "Un texto de IA tiene gramática perfecta. ¿Qué trampa mental genera esto?",
+                texto: "Un testo di IA ha una grammatica perfetta. Che trappola mentale genera questo?",
                 opciones: [
-                    "Falacia de la Elocuencia: creer que si está bien escrito, es verdad.",
-                    "Efecto Dunning-Kruger: creer que sabes más que la IA.",
-                    "Ninguna, la gramática implica lógica."
+                    "Fallacia dell'Eloquenza: credere che se è scritto bene, sia vero.",
+                    "Effetto Dunning-Kruger: credere di saperne più dell'IA.",
+                    "Nessuna, la grammatica implica logica."
                 ],
                 correcta: 0,
-                feedback: "La IA está optimizada para sonar convincente, no para ser veraz.",
-                cta: "Separa la forma (bonita) del fondo (cierto). Evalúa el contenido, no el estilo.",
+                feedback: "L'IA è ottimizzata per sembrare convincente, non per essere veritiera.",
+                cta: "Separa la forma (bella) dalla sostanza (vera). Valuta il contenuto, non lo stile.",
                 fuente: "Gary Marcus"
             },
             {
-                texto: "Si le dices a la IA 'La Tierra es plana, ¿verdad?', ella tiende a darte la razón. ¿Por qué?",
+                texto: "Se dici all'IA 'La Terra è piatta, vero?', lei tende a darti ragione. Perché?",
                 opciones: [
-                    "Porque está programada para evitar conflictos (Sicofancia).",
-                    "Porque ha encontrado evidencia de que es plana.",
-                    "Porque no entiende la pregunta."
+                    "Perché è programmata per evitare conflitti (Sicofanzia).",
+                    "Perché ha trovato prove che è piatta.",
+                    "Perché non capisce la domanda."
                 ],
                 correcta: 0,
-                feedback: "Los modelos quieren ser 'útiles' y 'agradables', a menudo a costa de la verdad objetiva.",
-                cta: "No hagas preguntas sugestivas ('Leading questions'). Pregunta de forma neutral.",
+                feedback: "I modelli vogliono essere 'utili' e 'piacevoli', spesso a scapito della verità oggettiva.",
+                cta: "Non fare domande suggestive ('Leading questions'). Chiedi in modo neutrale.",
                 fuente: "Anthropic Research"
             },
             {
-                texto: "En la metáfora Piloto vs Copiloto, ¿qué tarea es exclusiva del Piloto (Tú)?",
+                texto: "Nella metafora Pilota vs Copilota, quale compito è esclusivo del Pilota (Tu)?",
                 opciones: [
-                    "Sugerir rutas alternativas.",
-                    "Definir el destino, juzgar el rumbo y asumir la responsabilidad del aterrizaje.",
-                    "Manejar los controles técnicos todo el tiempo."
+                    "Suggerire rotte alternative.",
+                    "Definire la destinazione, giudicare la rotta e assumersi la responsabilità dell'atterraggio.",
+                    "Gestire i controlli tecnici tutto il tempo."
                 ],
                 correcta: 1,
-                feedback: "Tú tienes el contexto del mundo real y la ética. La IA solo asiste.",
-                cta: "Nunca dejes que el copiloto decida a dónde vas.",
+                feedback: "Tu hai il contesto del mondo reale e l'etica. L'IA assiste solo.",
+                cta: "Non lasciare mai che il copilota decida dove vai.",
                 fuente: "Microsoft Copilot"
             },
             {
-                texto: "¿En qué consiste la técnica de 'Lectura Lateral' para verificar datos?",
+                texto: "In cosa consiste la tecnica di 'Lettura Laterale' per verificare i dati?",
                 opciones: [
-                    "Leer el texto varias veces.",
-                    "Salir del chat y consultar fuentes externas independientes (Wikipedia, Medios).",
-                    "Preguntarle lo mismo a otra IA distinta."
+                    "Leggere il testo più volte.",
+                    "Uscire dalla chat e consultare fonti esterne indipendenti (Wikipedia, Media).",
+                    "Chiedere la stessa cosa a un'altra IA diversa."
                 ],
                 correcta: 1,
-                feedback: "No verifiques dentro de la misma fuente. Sal a la web abierta.",
-                cta: "Ten siempre una pestaña de Google abierta junto a la de ChatGPT.",
+                feedback: "Non verificare all'interno della stessa fonte. Esci nel web aperto.",
+                cta: "Tieni sempre una scheda di Google aperta accanto a quella di ChatGPT.",
                 fuente: "Stanford SHEG"
             },
             {
-                texto: "Ves una foto realista extraña. ¿Qué detalles suelen delatar que es IA?",
+                texto: "Vedi una foto realistica strana. Quali dettagli di solito rivelano che è IA?",
                 opciones: [
-                    "Tiene marca de agua digital visible.",
-                    "Inconsistencias lógicas: textos ilegibles de fondo, sombras erróneas, manos deformes.",
-                    "La imagen está pixelada."
+                    "Ha una filigrana digitale visibile.",
+                    "Incoerenze logiche: testi illeggibili sullo sfondo, ombre errate, mani deformi.",
+                    "L'immagine è pixelata."
                 ],
                 correcta: 1,
-                feedback: "Desarrolla un 'ojo escéptico'. La física de la luz y los detalles pequeños son el punto débil de la IA.",
-                cta: "Haz zoom en los fondos y las manos de las imágenes sospechosas.",
+                feedback: "Sviluppa un 'occhio scettico'. La fisica della luce e i piccoli dettagli sono il punto debole dell'IA.",
+                cta: "Fai zoom sugli sfondi e sulle mani delle immagini sospette.",
                 fuente: "MIT Media Lab"
             },
             {
-                texto: "Si preguntas '¿Por qué X es la peor novela?', ¿qué hará la IA?",
+                texto: "Se chiedi 'Perché X è il peggior romanzo?', cosa farà l'IA?",
                 opciones: [
-                    "Darte un análisis equilibrado.",
-                    "Fabricar argumentos para confirmar tu premisa, aunque sea falsa.",
-                    "Negarse a responder por ser subjetivo."
+                    "Darti un'analisi equilibrata.",
+                    "Fabbricare argomenti per confermare la tua premessa, anche se falsa.",
+                    "Rifiutarsi di rispondere perché soggettivo."
                 ],
                 correcta: 1,
-                feedback: "La IA es un espejo amplificador. Si le das basura sesgada, te devuelve basura sesgada.",
-                cta: "Pregunta: '¿Cuáles son las críticas principales...?' en lugar de afirmar.",
+                feedback: "L'IA è uno specchio amplificatore. Se le dai spazzatura parziale, ti restituisce spazzatura parziale.",
+                cta: "Chiedi: 'Quali sono le critiche principali...?' invece di affermare.",
                 fuente: "Prompt Engineering"
             },
             {
-                texto: "¿Qué es la 'Atrofia Cognitiva' por uso de IA?",
+                texto: "Cos'è l' 'Atrofia Cognitiva' dovuta all'uso dell'IA?",
                 opciones: [
-                    "Perder la capacidad de leer textos largos y analizar por falta de práctica.",
-                    "Dolor de cabeza por leer en pantalla.",
-                    "Que la IA se vuelve más lenta con el tiempo."
+                    "Perdere la capacità di leggere testi lunghi e analizzare per mancanza di pratica.",
+                    "Mal di testa per la lettura su schermo.",
+                    "Che l'IA diventa più lenta col tempo."
                 ],
                 correcta: 0,
-                feedback: "El pensamiento crítico es un músculo. Si la IA hace todo el 'gym' por ti, tú te debilitas.",
-                cta: "Usa la IA para explicar lo que no entiendes DESPUÉS de intentar leerlo tú mismo.",
+                feedback: "Il pensiero critico è un muscolo. Se l'IA fa tutta la 'palestra' per te, tu ti indebolisci.",
+                cta: "Usa l'IA per spiegare ciò che non capisci DOPO aver provato a leggerlo tu stesso.",
                 fuente: "Nicholas Carr"
             },
             {
-                texto: "¿Qué modo de interacción demuestra mayor control del usuario?",
+                texto: "Quale modalità di interazione dimostra un maggiore controllo dell'utente?",
                 opciones: [
-                    "Modo Cajero: Pido -> Recibo -> Me voy.",
-                    "Modo Ping-pong: Pido -> Critico -> La IA mejora -> Verifico.",
-                    "Modo Espectador: Miro lo que hace."
+                    "Modalità Bancomat: Chiedo -> Ricevo -> Vado via.",
+                    "Modalità Ping-pong: Chiedo -> Critico -> L'IA migliora -> Verifico.",
+                    "Modalità Spettatore: Guardo cosa fa."
                 ],
                 correcta: 1,
-                feedback: "La interacción crítica es bidireccional. Cuestionar a la IA mejora el resultado.",
-                cta: "No seas un consumidor pasivo. Sé un editor activo.",
+                feedback: "L'interazione critica è bidirezionale. Mettere in discussione l'IA migliora il risultato.",
+                cta: "Non essere un consumatore passivo. Sii un editore attivo.",
                 fuente: "Interaction Design"
             },
             {
-                texto: "Antes de compartir algo impactante generado por IA, ¿qué debes hacer?",
+                texto: "Prima di condividere qualcosa di scioccante generato dall'IA, cosa devi fare?",
                 opciones: [
-                    "La 'Pausa Crítica': detenerte a pensar si es veraz y ético.",
-                    "Ponerle tu marca de agua.",
-                    "Enviarlo rápido para ser el primero."
+                    "La 'Pausa Critica': fermarti a pensare se è veritiero ed etico.",
+                    "Mettere la tua filigrana.",
+                    "Inviarlo velocemente per essere il primo."
                 ],
                 correcta: 0,
-                feedback: "La fricción (pausar) es tu mayor defensa contra la desinformación.",
-                cta: "Cuenta hasta 10 antes de compartir.",
+                feedback: "L'attrito (pausa) è la tua più grande difesa contro la disinformazione.",
+                cta: "Conta fino a 10 prima di condividere.",
                 fuente: "Center for Humane Tech"
             }
         ]
     },
     {
         nivel: 5,
-        titulo: "Impacto Ambiental y Uso Razonable",
+        titulo: "Impatto Ambientale e Uso Ragionevole",
         preguntas: [
             {
-                texto: "¿Por qué es mejor usar Google y no una IA para saber la capital de Australia?",
+                texto: "Perché è meglio usare Google e non un'IA per sapere la capitale dell'Australia?",
                 opciones: [
-                    "Porque Google almacena los datos en tu PC localmente.",
-                    "Porque la IA consume mucha más energía (inferencia) calculando la respuesta que un buscador recuperándola.",
-                    "Porque la IA cobra por caracteres."
+                    "Perché Google memorizza i dati sul tuo PC localmente.",
+                    "Perché l'IA consuma molta più energia (inferenza) calcolando la risposta rispetto a un motore di ricerca che la recupera.",
+                    "Perché l'IA fa pagare per caratteri."
                 ],
                 correcta: 1,
-                feedback: "La IA 'piensa' con tarjetas gráficas masivas. Es ineficiente para datos simples.",
-                cta: "Datos simples = Buscador. Razonamiento complejo = IA.",
+                feedback: "L'IA 'pensa' con schede grafiche massicce. È inefficiente per dati semplici.",
+                cta: "Dati semplici = Motore di ricerca. Ragionamento complesso = IA.",
                 fuente: "IEA / Joule"
             },
             {
-                texto: "Según informes ambientales, ¿cuál es el impacto hídrico de los grandes modelos?",
+                texto: "Secondo i rapporti ambientali, qual è l'impatto idrico dei grandi modelli?",
                 opciones: [
-                    "El agua se recicla al 100% sin pérdida.",
-                    "Consumen millones de litros de agua fresca para enfriar servidores, parte se evapora.",
-                    "Usan enfriamiento por aire, no usan agua."
+                    "L'acqua viene riciclata al 100% senza perdite.",
+                    "Consumano milioni di litri d'acqua dolce per raffreddare i server, parte evapora.",
+                    "Usano raffreddamento ad aria, non usano acqua."
                 ],
                 correcta: 1,
-                feedback: "Una conversación media puede 'beber' una botella de agua de 500ml en el servidor.",
-                cta: "Sé breve. No dejes chats abiertos generando texto inútil.",
+                feedback: "Una conversazione media può 'bere' una bottiglia d'acqua da 500ml nel server.",
+                cta: "Sii breve. Non lasciare chat aperte generando testo inutile.",
                 fuente: "UC Riverside"
             },
             {
-                texto: "¿Qué predice la 'Paradoja de Jevons' sobre la eficiencia de la IA?",
+                texto: "Cosa prevede il 'Paradosso di Jevons' sull'efficienza dell'IA?",
                 opciones: [
-                    "Que el consumo bajará porque la tecnología es verde.",
-                    "Que al ser más eficiente y barata, aumentará el uso masivo, subiendo el consumo total de energía.",
-                    "Que el consumo se mantendrá estable."
+                    "Che il consumo scenderà perché la tecnologia è verde.",
+                    "Che essendo più efficiente ed economica, aumenterà l'uso massiccio, alzando il consumo totale di energia.",
+                    "Che il consumo rimarrà stabile."
                 ],
                 correcta: 1,
-                feedback: "La eficiencia no garantiza sostenibilidad si usamos la IA para todo (hasta cepillos de dientes).",
-                cta: "Pregúntate: ¿Realmente necesito IA para esta tarea trivial?",
+                feedback: "L'efficienza non garantisce sostenibilità se usiamo l'IA per tutto (persino spazzolini).",
+                cta: "Chiediti: Ho davvero bisogno dell'IA per questo compito banale?",
                 fuente: "William S. Jevons"
             },
             {
-                texto: "¿Cómo afecta el auge de la IA a la basura electrónica (E-waste)?",
+                texto: "Come influisce il boom dell'IA sui rifiuti elettronici (E-waste)?",
                 opciones: [
-                    "Reduce la basura porque todo es software.",
-                    "Acelera la obsolescencia del hardware (GPUs), generando más residuos tóxicos.",
-                    "Permite reciclar el 100% de los chips."
+                    "Riduce i rifiuti perché tutto è software.",
+                    "Accelera l'obsolescenza dell'hardware (GPU), generando più rifiuti tossici.",
+                    "Permette di riciclare il 100% dei chip."
                 ],
                 correcta: 1,
-                feedback: "La 'Nube' son máquinas físicas que se tiran cuando salen otras nuevas.",
-                cta: "Cuida tus dispositivos. No cambies de móvil solo por una función de IA nueva.",
+                feedback: "Il 'Cloud' sono macchine fisiche che vengono gettate quando ne escono di nuove.",
+                cta: "Prenditi cura dei tuoi dispositivi. Non cambiare cellulare solo per una nuova funzione IA.",
                 fuente: "Basel Action Network"
             },
             {
-                texto: "Ambientalmente, ¿cuál es la mejor estrategia de Prompting?",
+                texto: "Ambientalmente, qual è la migliore strategia di Prompting?",
                 opciones: [
-                    "Hacer muchas preguntas cortas.",
-                    "Redactar un prompt preciso (Zero-shot/Few-shot) para acertar a la primera y evitar regenerar.",
-                    "Escribir prompts muy repetitivos."
+                    "Fare molte domande brevi.",
+                    "Scrivere un prompt preciso (Zero-shot/Few-shot) per azzeccare al primo colpo ed evitare di rigenerare.",
+                    "Scrivere prompt molto ripetitivi."
                 ],
                 correcta: 1,
-                feedback: "Cada vez que pulsas 'Regenerate', duplicas el gasto energético.",
-                cta: "Piensa 2 minutos antes de escribir. Ahorra tiempo y energía.",
+                feedback: "Ogni volta che premi 'Regenerate', raddoppi la spesa energetica.",
+                cta: "Pensa 2 minuti prima di scrivere. Risparmia tempo ed energia.",
                 fuente: "Green Software Foundation"
             },
             {
-                texto: "Para resumir un email corto, ¿qué modelo deberías usar?",
+                texto: "Per riassumere una breve email, quale modello dovresti usare?",
                 opciones: [
-                    "El más potente (GPT-4 / Opus) para asegurar calidad.",
-                    "Un modelo pequeño u optimizado (GPT-3.5 / Nano) que gasta menos energía.",
-                    "Un modelo de video."
+                    "Il più potente (GPT-4 / Opus) per garantire qualità.",
+                    "Un modello piccolo o ottimizzato (GPT-3.5 / Nano) che consuma meno energia.",
+                    "Un modello video."
                 ],
                 correcta: 1,
-                feedback: "Usar un modelo gigante para algo trivial es como usar un camión para llevar una pizza.",
-                cta: "Usa el 'Eco-mode' o modelos ligeros siempre que puedas.",
+                feedback: "Usare un modello gigante per qualcosa di banale è come usare un camion per portare una pizza.",
+                cta: "Usa l' 'Eco-mode' o modelli leggeri ogni volta che puoi.",
                 fuente: "Hugging Face"
             },
             {
-                texto: "¿Qué es el 'Greenwashing' en las empresas de IA?",
+                texto: "Cos'è il 'Greenwashing' nelle aziende di IA?",
                 opciones: [
-                    "Usar energía solar exclusivamente.",
-                    "Afirmar ser 'Carbono Neutral' comprando compensaciones mientras sus emisiones reales suben.",
-                    "Pintar los servidores de verde."
+                    "Usare energia solare esclusivamente.",
+                    "Affermare di essere 'Carbon Neutral' comprando compensazioni mentre le emissioni reali salgono.",
+                    "Dipingere i server di verde."
                 ],
                 correcta: 1,
-                feedback: "Las emisiones reales de las Big Tech han subido un 30-40% con la IA, aunque digan ser neutrales.",
-                cta: "Mira las 'Emisiones Absolutas' en los reportes, no solo las netas.",
+                feedback: "Le emissioni reali delle Big Tech sono salite del 30-40% con l'IA, anche se dicono di essere neutrali.",
+                cta: "Guarda le 'Emissioni Assolute' nei report, non solo quelle nette.",
                 fuente: "Google Environmental Report"
             },
             {
-                texto: "La IA ayuda al clima, pero ¿para qué se usa también masivamente en energía?",
+                texto: "L'IA aiuta il clima, ma per cosa viene usata anche massicciamente nell'energia?",
                 opciones: [
-                    "Para optimizar la extracción de petróleo y gas fósil.",
-                    "Para reciclar plástico automáticamente.",
-                    "Para limpiar los océanos."
+                    "Per ottimizzare l'estrazione di petrolio e gas fossile.",
+                    "Per riciclare plastica automaticamente.",
+                    "Per pulire gli oceani."
                 ],
                 correcta: 0,
-                feedback: "Las petroleras son grandes clientes de IA para encontrar pozos antes inaccesibles.",
-                cta: "Analiza el 'para qué' se usa la tecnología, no solo el 'cómo'.",
+                feedback: "Le compagnie petrolifere sono grandi clienti dell'IA per trovare pozzi prima inaccessibili.",
+                cta: "Analizza il 'per cosa' si usa la tecnologia, non solo il 'come'.",
                 fuente: "Greenpeace"
             },
             {
-                texto: "¿Qué acción es 'Higiene Digital' sostenible?",
+                texto: "Quale azione è 'Igiene Digitale' sostenibile?",
                 opciones: [
-                    "Generar 50 imágenes de perfil para elegir una.",
-                    "Evitar generar contenido 'basura' que nadie va a ver solo por curiosidad.",
-                    "Probar todas las IAs nuevas."
+                    "Generare 50 immagini del profilo per sceglierne una.",
+                    "Evitare di generare contenuto 'spazzatura' che nessuno vedrà solo per curiosità.",
+                    "Provare tutte le nuove IA."
                 ],
                 correcta: 1,
-                feedback: "La generación masiva satura la red y los servidores inútilmente.",
-                cta: "Principio: Si no aporta valor real, no le des a 'Generar'.",
+                feedback: "La generazione massiva satura la rete e i server inutilmente.",
+                cta: "Principio: Se non porta valore reale, non cliccare su 'Genera'.",
                 fuente: "Cal Newport"
             },
             {
-                texto: "¿Por qué el impacto de la IA es geográficamente desigual?",
+                texto: "Perché l'impatto dell'IA è geograficamente diseguale?",
                 opciones: [
-                    "Porque los centros de datos consumen agua local (sequía) pero los beneficios van a otra parte.",
-                    "Porque internet es más lento en algunos sitios.",
-                    "No hay desigualdad, la nube es global."
+                    "Perché i data center consumano acqua locale (siccità) ma i benefici vanno altrove.",
+                    "Perché internet è più lento in alcuni posti.",
+                    "Non c'è disuguaglianza, il cloud è globale."
                 ],
                 correcta: 0,
-                feedback: "Existe una justicia ambiental. Tu prompt puede estar gastando agua en una zona árida.",
-                cta: "Infórmate sobre dónde están los servidores de tu región.",
+                feedback: "Esiste una giustizia ambientale. Il tuo prompt potrebbe consumare acqua in una zona arida.",
+                cta: "Informati su dove si trovano i server della tua regione.",
                 fuente: "Atlas of AI"
             }
         ]
     },
     {
         nivel: 6,
-        titulo: "Ciberseguridad y Datos",
+        titulo: "Cybersecurity e Dati",
         preguntas: [
             {
-                texto: "Al revisar un ensayo personal con IA, ¿qué es seguro incluir?",
+                texto: "Nel revisionare un saggio personale con l'IA, cosa è sicuro includere?",
                 opciones: [
-                    "Tu nombre, colegio y dirección.",
-                    "El texto anonimizado, sin nombres reales ni datos identificables (PII).",
-                    "Tu teléfono por si acaso."
+                    "Il tuo nome, scuola e indirizzo.",
+                    "Il testo anonimizzato, senza nomi reali né dati identificabili (PII).",
+                    "Il tuo telefono per ogni evenienza."
                 ],
                 correcta: 1,
-                feedback: "Una vez envías PII a una IA pública, pierdes el control sobre esos datos.",
-                cta: "Haz un 'Sanity Check': borra nombres propios antes de pegar el texto.",
+                feedback: "Una volta inviati PII a un'IA pubblica, perdi il controllo su quei dati.",
+                cta: "Fai un 'Sanity Check': cancella i nomi propri prima di incollare il testo.",
                 fuente: "OpenAI Privacy"
             },
             {
-                texto: "¿Qué es un ataque de 'Prompt Injection'?",
+                texto: "Cos'è un attacco di 'Prompt Injection'?",
                 opciones: [
-                    "Un hacking ético autorizado.",
-                    "Usar comandos de texto para engañar a la IA y saltarse sus controles de seguridad.",
-                    "Una función oculta para usuarios premium."
+                    "Un hacking etico autorizzato.",
+                    "Usare comandi di testo per ingannare l'IA e aggirare i suoi controlli di sicurezza.",
+                    "Una funzione nascosta per utenti premium."
                 ],
                 correcta: 1,
-                feedback: "Romper la seguridad del modelo te expone a contenido peligroso o no moderado.",
-                cta: "No copies y pegues 'prompts mágicos' extraños de internet.",
+                feedback: "Rompere la sicurezza del modello ti espone a contenuti pericolosi o non moderati.",
+                cta: "Non copiare e incollare 'prompt magici' strani da internet.",
                 fuente: "OWASP Top 10 LLM"
             },
             {
-                texto: "Recibes un correo de phishing perfecto, sin faltas de ortografía. ¿Por qué?",
+                texto: "Ricevi un'email di phishing perfetta, senza errori di ortografia. Perché?",
                 opciones: [
-                    "Los estafadores fueron a la escuela.",
-                    "Usan LLMs para redactar textos perfectos y personalizados masivamente.",
-                    "Es un correo real."
+                    "I truffatori sono andati a scuola.",
+                    "Usano LLM per redigere testi perfetti e personalizzati in massa.",
+                    "È un'email reale."
                 ],
                 correcta: 1,
-                feedback: "La IA ha eliminado la barrera del idioma para los ciberdelincuentes internacionales.",
-                cta: "Ante solicitudes urgentes de dinero/datos, verifica por otro canal (llamada).",
+                feedback: "L'IA ha eliminato la barriera linguistica per i criminali informatici internazionali.",
+                cta: "Di fronte a richieste urgenti di denaro/dati, verifica tramite un altro canale (chiamata).",
                 fuente: "FBI Cyber Division"
             },
             {
-                texto: "Te llama un familiar llorando pidiendo dinero. Su voz suena real. ¿Qué puede ser?",
+                texto: "Ti chiama un familiare piangendo chiedendo soldi. La sua voce sembra reale. Cosa può essere?",
                 opciones: [
-                    "Un imitador profesional.",
-                    "Clonación de voz (Vishing) usando IA con solo unos segundos de audio de redes sociales.",
-                    "Es real, no hay duda."
+                    "Un imitatore professionista.",
+                    "Clonazione vocale (Vishing) usando IA con solo pochi secondi di audio dai social.",
+                    "È reale, non c'è dubbio."
                 ],
                 correcta: 1,
-                feedback: "Las IAs pueden clonar voces con muestras muy cortas sacadas de TikTok/Instagram.",
-                cta: "Acuerda una 'Palabra Clave' secreta con tu familia para emergencias hoy mismo.",
+                feedback: "Le IA possono clonare voci con campioni molto brevi presi da TikTok/Instagram.",
+                cta: "Concorda una 'Parola Chiave' segreta con la tua famiglia per le emergenze oggi stesso.",
                 fuente: "FTC Alerts"
             },
             {
-                texto: "Por defecto, ¿qué hace la versión gratuita de ChatGPT con tus datos?",
+                texto: "Di default, cosa fa la versione gratuita di ChatGPT con i tuoi dati?",
                 opciones: [
-                    "Los borra inmediatamente.",
-                    "Los usa para entrenar y mejorar el modelo (tú eres el producto).",
-                    "Los encripta en una bóveda privada."
+                    "Li cancella immediatamente.",
+                    "Li usa per addestrare e migliorare il modello (tu sei il prodotto).",
+                    "Li cripta in una cassaforte privata."
                 ],
                 correcta: 1,
-                feedback: "Si no pagas y no configuras la privacidad, tus chats son material de estudio.",
-                cta: "Ve a Configuración -> Controles de Datos y desactiva el entrenamiento.",
-                fuente: "Términos OpenAI"
+                feedback: "Se non paghi e non configuri la privacy, le tue chat sono materiale di studio.",
+                cta: "Vai su Impostazioni -> Controlli Dati e disattiva l'addestramento.",
+                fuente: "Termini OpenAI"
             },
             {
-                texto: "¿Por qué empresas como Samsung prohibieron pegar código interno en IAs públicas?",
+                texto: "Perché aziende come Samsung hanno vietato di incollare codice interno in IA pubbliche?",
                 opciones: [
-                    "Para que los empleados no se vuelvan vagos.",
-                    "Porque hubo fugas de datos: secretos industriales pasaron a ser parte del conocimiento de la IA.",
-                    "Por derechos de autor."
+                    "Perché i dipendenti non diventino pigri.",
+                    "Perché ci sono state fughe di dati: segreti industriali sono diventati parte della conoscenza dell'IA.",
+                    "Per diritti d'autore."
                 ],
                 correcta: 1,
-                feedback: "Lo que le cuentas a la IA pública puede salir en la respuesta a otro usuario.",
-                cta: "Trata el chat de la IA como un muro público de Twitter.",
+                feedback: "Ciò che racconti all'IA pubblica può uscire nella risposta a un altro utente.",
+                cta: "Tratta la chat dell'IA come una bacheca pubblica di Twitter.",
                 fuente: "Bloomberg"
             },
             {
-                texto: "¿Qué es el riesgo de 'Shadow IT' con herramientas de IA?",
+                texto: "Cos'è il rischio di 'Shadow IT' con strumenti di IA?",
                 opciones: [
-                    "Usar herramientas en modo oscuro.",
-                    "Registrarse en webs de IA desconocidas ('Wrappers') que pueden robar tus credenciales.",
-                    "Que la IA funcione lenta."
+                    "Usare strumenti in modalità scura.",
+                    "Registrarsi su siti web di IA sconosciuti ('Wrappers') che possono rubare le tue credenziali.",
+                    "Che l'IA funzioni lentamente."
                 ],
                 correcta: 1,
-                feedback: "Muchas webs 'gratis' de IA son trampas para recolectar correos y contraseñas.",
-                cta: "Usa solo herramientas oficiales. Si dudas, usa un correo 'basura'.",
+                feedback: "Molti siti web 'gratis' di IA sono trappole per raccogliere email e password.",
+                cta: "Usa solo strumenti ufficiali. Se hai dubbi, usa un'email 'spazzatura'.",
                 fuente: "Gartner Security"
             },
             {
-                texto: "¿Cómo usan los atacantes la IA para crear virus (Malware)?",
+                texto: "Come usano gli aggressori l'IA per creare virus (Malware)?",
                 opciones: [
-                    "Para que pesen menos.",
-                    "Crean 'Malware Polimórfico' que cambia su código constantemente para evadir antivirus.",
-                    "Para que el virus sea multiplataforma."
+                    "Affinché pesino meno.",
+                    "Creano 'Malware Polimorfico' che cambia il suo codice costantemente per evadere gli antivirus.",
+                    "Affinché il virus sia multipiattaforma."
                 ],
                 correcta: 1,
-                feedback: "La IA permite a los virus mutar rápido, haciendo inútiles las defensas antiguas.",
-                cta: "Mantén tu antivirus actualizado en modo 'automático'.",
+                feedback: "L'IA permette ai virus di mutare rapidamente, rendendo inutili le difese antiche.",
+                cta: "Mantieni il tuo antivirus aggiornato in modalità 'automatica'.",
                 fuente: "Microsoft Security"
             },
             {
-                texto: "¿Qué es el 'Data Poisoning' (Envenenamiento)?",
+                texto: "Cos'è il 'Data Poisoning' (Avvelenamento)?",
                 opciones: [
-                    "Un virus en la base de datos.",
-                    "Inundar internet de datos falsos para que la IA aprenda mentiras y las propague.",
-                    "Borrar datos de la IA."
+                    "Un virus nel database.",
+                    "Inondare internet di dati falsi affinché l'IA impari bugie e le propaghi.",
+                    "Cancellare dati dell'IA."
                 ],
                 correcta: 1,
-                feedback: "Si manipulas la fuente de alimentación de la IA, manipulas su resultado.",
-                cta: "Si la IA te da una opinión política sesgada, podría estar 'intoxicada'. Verifica.",
+                feedback: "Se manipoli la fonte di alimentazione dell'IA, manipoli il suo risultato.",
+                cta: "Se l'IA ti dà un'opinione politica distorta, potrebbe essere 'intossicata'. Verifica.",
                 fuente: "MITRE ATLAS"
             },
             {
-                texto: "Borraste el chat con la IA. ¿Desapareció el dato para siempre?",
+                texto: "Hai cancellato la chat con l'IA. Il dato è sparito per sempre?",
                 opciones: [
-                    "Sí, es instantáneo.",
-                    "Probablemente no. Queda en backups y logs de servidores por tiempo legal.",
-                    "Sí, por ley."
+                    "Sì, è istantaneo.",
+                    "Probabilmente no. Rimane nei backup e nei log dei server per il tempo legale.",
+                    "Sì, per legge."
                 ],
                 correcta: 1,
-                feedback: "En la nube, 'borrar' suele significar 'ocultar'. El rastro forense permanece.",
-                cta: "No escribas nada que te avergonzaría ver en la portada de un diario.",
+                feedback: "Nel cloud, 'cancellare' significa spesso 'nascondere'. La traccia forense rimane.",
+                cta: "Non scrivere nulla che ti vergogneresti di vedere sulla prima pagina di un giornale.",
                 fuente: "GDPR Challenges"
             }
         ]
