@@ -39,7 +39,8 @@ const glosarioTerminos = {
         "PII": "Personally Identifiable Information (Name, address, ID) that should never be shared with public AIs.",
         "Prompt Injection": "Cyberattack using malicious text to trick the AI and bypass its security rules.",
         "Phishing": "Cybercrime technique to trick you into revealing confidential data (now perfected by AI).",
-        "Data Poisoning": "Attack that introduces false data into AI training to corrupt its future responses."
+        "Data Poisoning": "Attack that introduces false data into AI training to corrupt its future responses.",
+        "CRTF": "It is a methodology for creating Prompts that helps us get better AI responses. It is the acronym for Context – Role – Task – Format"
     },
     it: {
         "LLM": "Large Language Model. IA addestrata su testi massicci per prevedere e generare il linguaggio umano.",
@@ -58,6 +59,7 @@ const glosarioTerminos = {
         "PII": "Informazioni di Identificazione Personale (Nome, indirizzo, ID) che non dovrebbero mai essere condivise con IA pubbliche.",
         "Prompt Injection": "Attacco informatico che utilizza testo dannoso per ingannare l'IA e aggirare le sue regole di sicurezza.",
         "Phishing": "Tecnica di criminalità informatica per ingannarti e farti rivelare dati riservati (ora perfezionata dall'IA).",
-        "Data Poisoning": "Attacco che introduce dati falsi nell'addestramento dell'IA per corrompere le sue risposte future."
+        "Data Poisoning": "Attacco che introduce dati falsi nell'addestramento dell'IA per corrompere le sue risposte future.",
+        "CRTF": "È una metodologia per creare Prompt che ci aiuta a ottenere risposte migliori dall'IA. È l'acronimo di Contesto – Ruolo – Compito – Formato"
     }
 };
