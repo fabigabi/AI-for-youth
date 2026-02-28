@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Q: Trivia Mastery</title>
+    <!-- Use Google Fonts (Inter and Orbitron for neo-tech look) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <div class="app-container">
+        
+        <!-- Language Selection Screen -->
+        <section id="start-screen" class="screen active fade-in">
+            <div class="language-selector">
+                <button class="lang-btn active" data-lang="es" title="Español">🇪🇸 ES</button>
+                <button class="lang-btn" data-lang="en" title="English">🇺🇸 EN</button>
+                <button class="lang-btn" data-lang="it" title="Italiano">🇮🇹 IT</button>
+            </div>
+            <div class="glass-card start-card">
+                <div class="logo-box">
+                    <span class="glitch" data-text="AI-Q">AI-Q</span>
+                    <span class="sub-logo">TRIVIA MASTERY</span>
+                </div>
+                <p class="description">
+                    6 Levels. 60 Challenges. Perfect Score Required.
+                    <br>Can you beat the clock and dominate the AI era?
+                </p>
+                <button id="start-btn" class="neon-btn">INITIALIZE <span class="arrow">➜</span></button>
+            </div>
+            <div class="leaderboard-preview glass-card">
+                <h3><span class="icon">🏆</span> Top Players</h3>
+                <div id="preview-ranking">Loading...</div>
+            </div>
+        </section>
+
+        <!-- Main Game Screen -->
+        <section id="game-screen" class="screen hidden">
+            <!-- Header bar for game stats -->
+            <header class="game-header glass-panel">
+                <div class="level-info">
+                    <span class="level-badge">LVL <span id="current-level">1</span></span>
+                    <span id="level-title" class="level-title">Conceptos</span>
+                </div>
+                <div class="timer-box">
+                    <span class="timer-icon">⏱️</span>
+                    <span id="timer-display">00:00</span>
+                </div>
+                <div class="score-info">
+                    <div class="score-points">Pts: <span id="score">0</span></div>
+                    <div class="errors-count">Err: <span id="errors">0</span></div>
+                </div>
+            </header>
+
+            <!-- Progress Bar -->
+            <div class="progress-wrap">
+                <div id="progress-bar" class="progress-bar"></div>
+            </div>
+
+            <!-- Question Area -->
+            <main class="question-area">
+                <div class="question-card glass-card fade-in">
+                    <h2 id="question-text" class="question-text">Initializing parameters...</h2>
+                    <div id="options-container" class="options-grid">
+                        <!-- Options injected via JS -->
+                    </div>
+                </div>
+            </main>
+
+            <!-- Feedback Area (Overlay for incorrect/correct answers before next) -->
+            <div id="feedback-overlay" class="feedback-overlay hidden">
+                <div class="feedback-card glass-card glow">
+                    <div class="feedback-header">
+                        <h3 id="feedback-title" class="feedback-title">Title</h3>
+                        <div id="feedback-icon" class="feedback-icon"></div>
+                    </div>
+                    <div class="feedback-body">
+                        <p id="feedback-text" class="feedback-text">Explanation...</p>
+                        <div class="cta-box">
+                            <span class="cta-icon">💡</span>
+                            <span id="feedback-cta" class="feedback-cta-text">Tip...</span>
+                        </div>
+                        <p class="source-text">Source: <span id="feedback-source">Author</span></p>
+                    </div>
+                    <button id="next-btn" class="neon-btn small">CONTINUE <span class="arrow">➜</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Level Failed Screen -->
+        <section id="failed-screen" class="screen hidden fade-in">
+            <div class="glass-card error-card">
+                <h2 class="error-title">SYSTEM FAILURE</h2>
+                <p>You cannot advance unless you answer all questions correctly.</p>
+                <div class="stats-recap">
+                    <p>Level: <span id="failed-level-num"></span></p>
+                    <p>Score: <span id="failed-score"></span>/10</p>
+                </div>
+                <button id="retry-level-btn" class="neon-btn">REBOOT LEVEL <span class="arrow">↺</span></button>
+            </div>
+        </section>
+
+        <!-- Final Summary Screen -->
+        <section id="end-screen" class="screen hidden fade-in">
+            <div class="glass-card success-card">
+                <h2 class="success-title glow-text-purple">SIMULATION COMPLETE</h2>
+                
+                <div class="final-stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-label">Total Time</span>
+                        <span id="final-time" class="stat-value text-blue">00:00</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Total Errors</span>
+                        <span id="final-errors" class="stat-value text-red">0</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Global Rank</span>
+                        <span id="final-rank" class="stat-value text-green">#--</span>
+                    </div>
+                </div>
+
+                <div id="saving-indicator" class="saving-indicator">
+                    <div class="spinner"></div>
+                    <span>Syncing with Global Database...</span>
+                </div>
+
+                <div class="action-buttons mt-4">
+                    <button onclick="location.reload()" class="neon-btn outline">NEW SIMULATION</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Universal Footer -->
+        <footer class="app-footer glass-panel">
+            <a href="#" id="open-full-glossary" class="footer-link">📖 View Glossary</a>
+        </footer>
+    </div>
+
+    <!-- Modals -->
+    <!-- Term Definition Callout (Tooltip inside question) -->
+    <div id="term-modal" class="modal hidden">
+        <div class="modal-content glass-card tooltip-card">
+            <span class="close-btn" id="close-term-modal">&times;</span>
+            <h3 id="term-title" class="term-title glow-text-blue">Term</h3>
+            <p id="term-def" class="term-def">Definition goes here...</p>
+        </div>
+    </div>
+
+    <!-- Full Glossary List Modal -->
+    <div id="full-glossary-modal" class="modal hidden">
+        <div class="modal-content glass-card full-modal">
+            <span class="close-btn" id="close-full-glossary">&times;</span>
+            <h2 class="glow-text-purple mb-4">GLOSSARY DATABANK</h2>
+            <div class="search-box mb-4">
+                <input type="text" id="glossary-search" placeholder="Search terms..." class="glass-input">
+            </div>
+            <div id="full-glossary-list" class="glossary-list-scroll">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="glosario.js"></script>
+    <script src="preguntas.sp.js"></script>
+    <script src="preguntas.en.js"></script>
+    <script src="preguntas.it.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
