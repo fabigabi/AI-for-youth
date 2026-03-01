@@ -20,7 +20,10 @@ window.glosarioTerminos = {
         "Prompt Injection": "Ataque informático que usa texto malicioso para engañar a la IA y saltarse sus reglas de seguridad.",
         "Phishing": "Técnica de ciberdelincuencia para engañarte y que reveles datos confidenciales (ahora perfeccionada por IA).",
         "Data Poisoning": "Ataque que introduce datos falsos en el entrenamiento de la IA para corromper sus futuras respuestas.",
-        "CRTF": "Es una metodolog€ia para crear Prompts que nos ayuda a obtener mejores respuestas de IA. Es el acrónimo de Contexto – Rol – Tarea – Formato"
+        "CRTF": "Es una metodolog€ia para crear Prompts que nos ayuda a obtener mejores respuestas de IA. Es el acrónimo de Contexto – Rol – Tarea – Formato",
+        "Temperatura": "La temperatura es un hiperparámetro de configuración que controla el grado de aleatoriedad o predictibilidad en las respuestas de una IA. No se refiere al calor físico del hardware, sino a una función matemática aplicada durante el proceso de selección de palabras.",
+        "Garbage In, Garbage Out": "Es un principio fundamental que establece que la calidad de la respuesta de una IA depende totalmente de la calidad de los datos con los que fue entrenada o de las instrucciones que recibe.",
+        "Efecto ELIZA": "El Efecto ELIZA es la tendencia humana a atribuir erróneamente emociones, conciencia o inteligencia real a un programa de computadora, simplemente porque el software simula una conversación humana fluida."
     },
     en: {
         "LLM": "Large Language Model. AI trained on massive texts to predict and generate human language.",
@@ -39,7 +42,10 @@ window.glosarioTerminos = {
         "PII": "Personally Identifiable Information (Name, address, ID) that should never be shared with public AIs.",
         "Prompt Injection": "Cyberattack using malicious text to trick the AI and bypass its security rules.",
         "Phishing": "Cybercrime technique to trick you into revealing confidential data (now perfected by AI).",
-        "Data Poisoning": "Attack that introduces false data into AI training to corrupt its future responses."
+        "Data Poisoning": "Attack that introduces false data into AI training to corrupt its future responses.",
+        "Temperature": "Temperature is a configuration hyperparameter that controls the degree of randomness or predictability in an AI's responses. It does not refer to the physical heat of the hardware, but to a mathematical function applied during the word selection process.",
+        "Garbage In, Garbage Out": "A fundamental principle stating that the quality of an AI's response depends entirely on the quality of the data it was trained on or the instructions it receives.",
+        "ELIZA Effect": "The ELIZA Effect is the human tendency to mistakenly attribute emotions, consciousness, or real intelligence to a computer program simply because the software simulates fluent human conversation."
     },
     it: {
         "LLM": "Large Language Model. IA addestrata su testi massicci per prevedere e generare il linguaggio umano.",
@@ -58,6 +64,9 @@ window.glosarioTerminos = {
         "PII": "Informazioni di Identificazione Personale (Nome, indirizzo, ID) che non dovrebbero mai essere condivise con IA pubbliche.",
         "Prompt Injection": "Attacco informatico che utilizza testo dannoso per ingannare l'IA e aggirare le sue regole di sicurezza.",
         "Phishing": "Tecnica di criminalità informatica per ingannarti e farti rivelare dati riservati (ora perfezionata dall'IA).",
-        "Data Poisoning": "Attacco che introduce dati falsi nell'addestramento dell'IA per corrompere le sue risposte future."
+        "Data Poisoning": "Attacco che introduce dati falsi nell'addestramento dell'IA per corrompere le sue risposte future.",
+        "Temperatura": "La temperatura è un iperparametro di configurazione che controlla il grado di casualità o prevedibilità nelle risposte di un'IA. Non si riferisce al calore fisico dell'hardware, ma a una funzione matematica applicata durante il processo di selezione delle parole.",
+        "Garbage In, Garbage Out": "È un principio fondamentale che stabilisce che la qualità della risposta di un'IA dipende interamente dalla qualità dei dati con cui è stata addestrata o dalle istruzioni che riceve.",
+        "Effetto ELIZA": "L'Effetto ELIZA è la tendenza umana ad attribuire erroneamente emozioni, coscienza o reale intelligenza a un programma per computer, semplicemente perché il software simula una conversazione umana fluida."
     }
 };
